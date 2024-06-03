@@ -24,9 +24,11 @@ class _SwitchTabPageState extends State<BottomNavigationBarEnhanceExample> {
         label: "首页"
     ),
     BottomNavigationBarEnhanceItem(
-        icon: 'assets/images/order.png',
-        selectedIcon: 'assets/images/order_selected.png',
-        label: "订单"
+      icon: 'assets/images/order.png',
+      selectedIcon: 'assets/images/order_selected.png',
+      label: "订单",
+      isBadgeVisible: true,
+      badgeLabel: "10",
     ),
     BottomNavigationBarEnhanceItem(
         icon: 'assets/images/my.png',
@@ -34,9 +36,10 @@ class _SwitchTabPageState extends State<BottomNavigationBarEnhanceExample> {
         label: "我的"
     ),
     BottomNavigationBarEnhanceItem(
-        icon: 'assets/images/my.png',
-        selectedIcon: 'assets/images/my_selected.png',
-        label: "我的2"
+      icon: 'assets/images/my.png',
+      selectedIcon: 'assets/images/my_selected.png',
+      label: "我的2",
+      isBadgeVisible: true,
     ),
   ];
 

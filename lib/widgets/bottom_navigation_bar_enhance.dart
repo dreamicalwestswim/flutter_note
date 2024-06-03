@@ -11,10 +11,18 @@ class BottomNavigationBarEnhanceItem{
   /// 文字
   String label;
 
+  /// 是否展示徽章
+  bool isBadgeVisible;
+
+  /// 徽章标签
+  String? badgeLabel;
+
   BottomNavigationBarEnhanceItem({
     required this.icon,
     required this.selectedIcon,
     required this.label,
+    this.isBadgeVisible = false,
+    this.badgeLabel,
   });
 }
 
@@ -72,8 +80,23 @@ class BottomNavigationBarEnhance extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Image.asset(isCurrent ? item.selectedIcon : item.icon, width: 25, gaplessPlayback: true),
-                Text(item.label, style: TextStyle(fontSize: 13, color: isCurrent ? selectedColor : color),)
+                Badge(
+                  isLabelVisible: item.isBadgeVisible,
+                  label: item.badgeLabel != null ? Text(item.badgeLabel!) : null,
+                  backgroundColor: Colors.red,
+                  child: Image.asset(
+                    isCurrent ? item.selectedIcon : item.icon,
+                    width: 25,
+                    gaplessPlayback: true,
+                  ),
+                ),
+                Text(
+                  item.label,
+                  style: TextStyle(
+                    fontSize: 14,
+                    color: isCurrent ? selectedColor : color,
+                  ),
+                ),
               ],
             ),
           ),
@@ -92,8 +115,8 @@ class BottomNavigationBarEnhance extends StatelessWidget {
       surfaceTintColor: Colors.transparent,
       // 去除填充
       padding: EdgeInsets.zero,
-      height: 50,
-      color: const Color(0xfff5e5ff),
+      height: 60,
+      color: const Color(0xffffffff),
       // 底部导航栏打一个圆形的洞（只有Scaffold里面设置了浮动按钮才会出现打孔效果）
       shape: const CircularNotchedRectangle(),
       child: Row(
