@@ -1879,6 +1879,30 @@ class _MyHomePageState extends State<MyHomePage> {
                     },
                   ),
                 ]),
+            ////////////////////////////////与ios/android平台交互///////////////////////////////
+            ExpansionTile(
+                title: Text(
+                  'MethodChannel与ios/android平台交互 ',
+                  style: titleStyle,
+                ),
+                children: [
+                  ListTile(
+                    title: const Text('ios获取电量'),
+                    subtitle: const Text('演示如何通过平台通道调用ios平台代码来获取设备电量'),
+                    trailing: const Icon(Icons.keyboard_arrow_right),
+                    onTap: () {
+                      Get.toNamed("/iosBatteryLevelExample");
+                    },
+                  ),
+                  ListTile(
+                    title: const Text('android获取电量'),
+                    subtitle: const Text('演示如何通过平台通道调用android平台代码来获取设备电量'),
+                    trailing: const Icon(Icons.keyboard_arrow_right),
+                    onTap: () {
+                      Get.toNamed("/androidBatteryLevelExample");
+                    },
+                  ),
+                ]),
           ],
         )
     );

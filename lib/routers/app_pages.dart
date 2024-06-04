@@ -13,6 +13,8 @@ import '../examples/getx/Login.dart';
 import '../examples/getx/ObxExample.dart';
 import '../examples/getx/ThemeChangeExample.dart';
 import '../examples/getx/User.dart';
+import '../examples/platformChannels/AndroidBatteryLevelExample.dart';
+import '../examples/platformChannels/IosBatteryLevelExample.dart';
 import '../main.dart';
 import 'auth_middle_ware.dart';
 
@@ -76,6 +78,14 @@ class AppPages {
     GetPage(
       name: RouteNames.DialogUtils,
       page: () => DialogUtilsExample(),
+    ),
+    GetPage(
+      name: RouteNames.iosBatteryLevel,
+      page: () =>  IosBatteryLevelExample(),
+    ),
+    GetPage(
+      name: RouteNames.androidBatteryLeve,
+      page: () => AndroidBatteryLevelExample(),
     ),
   ];
 }
