@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-class IosBatteryLevelExample extends StatefulWidget {
-  const IosBatteryLevelExample({super.key});
+class MethodChannelExample extends StatefulWidget {
+  const MethodChannelExample({super.key});
 
   @override
-  State<IosBatteryLevelExample> createState() => _IosBatteryLevelState();
+  State<MethodChannelExample> createState() => _MethodChannelExampleState();
 }
 
 /// iOS 原生代码位置
@@ -14,7 +14,13 @@ class IosBatteryLevelExample extends StatefulWidget {
 /// Swift：ios/Runner/AppDelegate.swift(如果未找到一定要去xcode里面找，如果直接在其他工具里面创建覆盖，很有可能运行不起来，主要原因是不同版本写法有差异，网上说的和你当前使用的不一定写法一样，所以要找到默认文件，这个是初始化时创建好的正确写法)
 /// 踩坑：外部没找到这个文件，直接创建了一份导致怎么都跑不起来，然后对比git修改才发现原来的写法和网上说的不一样，改了一下就成功了.
 
-class _IosBatteryLevelState extends State<IosBatteryLevelExample> {
+
+/// Android 原生代码位置
+/// 原生 Android 代码通常写在 android 目录下的 MainActivity 文件中。具体路径是：
+/// Java：android/app/src/main/java/com/example/myapp/MainActivity.java
+/// Kotlin：android/app/src/main/kotlin/com/example/myapp/MainActivity.kt
+
+class _MethodChannelExampleState extends State<MethodChannelExample> {
   /// 定义要访问的平台通道
   static const platform = MethodChannel('com.example.notes/channel');
 
@@ -55,7 +61,7 @@ class _IosBatteryLevelState extends State<IosBatteryLevelExample> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("flutter访问ios端的平台信息")),
+      appBar: AppBar(title: Text("flutter平台信息")),
       body: Container(
         padding: const EdgeInsets.symmetric(vertical: 10),
         child: Column(

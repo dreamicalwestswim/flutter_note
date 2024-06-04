@@ -12,6 +12,5 @@ abstract class RouteNames {
   static const GalleryPicker = '/galleryPickerExample';
   static const GalleryPreview = '/galleryPreviewExample';
   static const DialogUtils = '/dialogUtilsExample';
-  static const iosBatteryLevel = '/iosBatteryLevelExample';
-  static const androidBatteryLeve = '/androidBatteryLevelExample';
+  static const MethodChannel = '/methodChannelExample';
 }

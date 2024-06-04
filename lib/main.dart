@@ -1887,19 +1887,11 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 children: [
                   ListTile(
-                    title: const Text('ios获取电量'),
-                    subtitle: const Text('演示如何通过平台通道调用ios平台代码来获取设备电量'),
+                    title: const Text('ios/android获取电量'),
+                    subtitle: const Text('演示如何通过平台通道调用平台代码来获取设备信息'),
                     trailing: const Icon(Icons.keyboard_arrow_right),
                     onTap: () {
-                      Get.toNamed("/iosBatteryLevelExample");
-                    },
-                  ),
-                  ListTile(
-                    title: const Text('android获取电量'),
-                    subtitle: const Text('演示如何通过平台通道调用android平台代码来获取设备电量'),
-                    trailing: const Icon(Icons.keyboard_arrow_right),
-                    onTap: () {
-                      Get.toNamed("/androidBatteryLevelExample");
+                      Get.toNamed("/methodChannelExample");
                     },
                   ),
                 ]),
