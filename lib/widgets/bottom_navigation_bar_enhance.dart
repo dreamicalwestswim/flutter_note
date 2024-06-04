@@ -83,6 +83,7 @@ class BottomNavigationBarEnhance extends StatelessWidget {
                 Badge(
                   isLabelVisible: item.isBadgeVisible,
                   label: item.badgeLabel != null ? Text(item.badgeLabel!) : null,
+                  smallSize: 8,
                   backgroundColor: Colors.red,
                   child: Image.asset(
                     isCurrent ? item.selectedIcon : item.icon,
@@ -93,7 +94,7 @@ class BottomNavigationBarEnhance extends StatelessWidget {
                 Text(
                   item.label,
                   style: TextStyle(
-                    fontSize: 14,
+                    fontSize: 13,
                     color: isCurrent ? selectedColor : color,
                   ),
                 ),
